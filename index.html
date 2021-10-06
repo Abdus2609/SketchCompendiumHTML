@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>THE SKETCH COMPENDIUM</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<section class="header">
+		<nav>
+			<a href="index.html"><img src="logo/logo2.png"></a>
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times" onclick="hideMenu()"></i>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li><a href="posts.html">POSTS</a></li>
+					<li><a href="contact.html">CONTACT US</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()"></i>
+		</nav>
+
+		<div class="text-box">
+			<h1>WELCOME TO THE SKETCH COMPENDIUM</h1>
+			<p>This is just a space for showcasing any and all art. We welcome all styles and genres. Have fun!</p>
+			<a href="posts.html" class="hero-btn">Click here to see some posts</a>
+			<br>
+			<a href="contact.html" class="hero-btn">Click here to post your first masterpiece</a>
+		</div>
+	</section>
+
+<!---example=posts--->
+
+	<section class="example-posts">
+		<h1>Some of our posts</h1>
+		<p>Here are some of our popular posts. Post yours and you could be here too!</p>
+
+		<div class="row">
+			<div class="post">
+				<img src="madara.jpg">
+			</div>
+			<div class="post">
+				<img src="naruto.jpg">
+			</div>
+			<div class="post">
+				<img src="superman.jpg">
+			</div>
+		</div>
+	</section>
+
+<!---join us--->
+
+	<section class="join">
+		<h1>Start your artistic adventure here and upload<br>some of your work to be showcased</h1>
+		<a href="contact.html" class="hero-btn">CREATE A POST</a>
+	</section>
+
+<!---footer-->
+
+	<section class="footer">
+		<h4>About Us</h4>
+		<p>This website was solely created to preserve all art and ensure everyone has the chance for their work to be seen by the world.</p>
+		<p>Copyright <i class="fa fa-copyright"></i> 2021 [YAOi Productions]</p>
+	</section>
+
+<!-----------JavaScript for Scroll Reveal Transition--->
+
+	<script type="text/javascript">
+	window.addEventListener('scroll', reveal);
+
+	function reveal() {
+		var reveals = document.querySelectorAll('.post');
+
+		for (var i = 0; i < reveals.length; i++) {
+
+			var windowHeight = window.innerHeight;
+			var revealTop = reveals[i].getBoundingClientRect().top;
+			var revealPoint = 150;
+
+			if (revealTop < windowHeight - revealPoint) {
+				reveals[i].classList.add('active');
+			} else {
+				reveals[i].classList.remove('active');
+			}
+		}
+	} 
+	</script>
+
+<!------------JavaScript for Toggle Menu------------>
+
+	<script type="text/javascript">
+		
+		var navLinks = document.getElementById("navLinks");
+
+		function showMenu() {
+			navLinks.style.right = "0";
+		}
+
+		function hideMenu() {
+			navLinks.style.right = "-200px";
+		}
+
+	</script>
+
+</body>
+</html>
