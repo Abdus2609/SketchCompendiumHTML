@@ -1,2 +1,3 @@
-# SketchCompendium
-The required files for the Sketch Compendium website
+# Sketch Compendium (HTML)
+
+Available at: https://sketchcompendium.000webhostapp.com/
